@@ -209,7 +209,7 @@ main { position: relative; z-index: 2; }
   color: var(--verde-escuro);
   font-weight: 600;
   background:
-    url('imagens/hero.jpg') center / cover no-repeat,
+    url('imagens/banners/hero-familia.jpg') 62% center / cover no-repeat,
     radial-gradient(circle at 30% 30%, #FBE7D3 0%, transparent 55%),
     radial-gradient(circle at 75% 70%, #DCEFE5 0%, transparent 60%),
     linear-gradient(135deg, #F4EEF9, #FDF3E7);
@@ -287,6 +287,14 @@ main { position: relative; z-index: 2; }
   color: var(--texto);
 }
 
+/* ===== Ícones ilustrados (imagens/ilustracions) ===== */
+.cartao-img {
+  width: 96px;
+  height: auto;
+  display: block;
+  margin: 0 auto 18px;
+}
+
 /* ===== Faixa final ===== */
 .faixa {
   position: relative;
@@ -296,14 +304,16 @@ main { position: relative; z-index: 2; }
   flex-wrap: wrap;
   margin: 0 clamp(0px, 0vw, 0px);
   padding: 64px clamp(20px, 5vw, 80px) 72px;
-  background: linear-gradient(180deg, #F3EAF9 0%, #EFE4F7 100%);
+  background: #F3EAF9 url('imagens/banner-institucional/banner-inferior.jpg') center / cover no-repeat;
   border-radius: 60% 60% 0 0 / 40px 40px 0 0;
   margin-top: 20px;
 }
 
 .faixa-broto {
-  width: 96px;
-  height: 96px;
+  width: 150px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 18px;
   flex-shrink: 0;
 }
 

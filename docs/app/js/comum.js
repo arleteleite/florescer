@@ -149,7 +149,15 @@
 
   const ordenados = (lista) => [...lista].sort((a, b) => (a.data < b.data ? 1 : -1));
   const gerarToken = () => Math.random().toString(36).slice(2, 10);
-  const iconeCartao = (tom, nome) => `<div class="cartao-icone ${tom}">${ICONES[nome]}</div>`;
+  const IMAGENS = {
+    pessoas: 'parceria.jpg',
+    estrela: 'conquista.jpg',
+    calendario: 'calendar.jpg',
+    escudo: 'seguranca.jpg',
+    link: 'parceria.jpg',
+    engrenagem: 'seguranca.jpg'
+  };
+  const iconeCartao = (tom, nome) => `<img class="cartao-img" src="../imagens/ilustracions/${IMAGENS[nome]}" alt="">`;
 
   const participacaoHTML = (n) => {
     const pontos = [1, 2, 3, 4, 5]
