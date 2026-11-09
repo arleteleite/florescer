@@ -21,14 +21,14 @@
 
   function lerEstado() {
     try {
-      return Object.assign({}, PADRAO, JSON.parse(sessionStorage.getItem(CHAVE_ESTADO)) || {});
+      return Object.assign({}, PADRAO, JSON.parse(localStorage.getItem(CHAVE_ESTADO)) || {});
     } catch (e) {
       return Object.assign({}, PADRAO);
     }
   }
 
   function salvarEstado() {
-    try { sessionStorage.setItem(CHAVE_ESTADO, JSON.stringify(estado)); } catch (e) { /* segue em memória */ }
+    try { localStorage.setItem(CHAVE_ESTADO, JSON.stringify(estado)); } catch (e) { /* segue em memória */ }
   }
 
   function avisarProximaPagina(msg) {
@@ -125,7 +125,7 @@
 
   const RODAPE = `
     <footer class="rodape">
-      <p>Florescer · Protótipo de demonstração · dados fictícios · <a href="../index.html">Voltar ao site</a></p>
+      <p>Florescer · Protótipo de demonstração · dados fictícios · <a href="fluxo.html">Fluxo do sistema</a> · <a href="../index.html">Voltar ao site</a></p>
     </footer>`;
 
   /* ===== Utilitários ===== */
@@ -150,14 +150,14 @@
   const ordenados = (lista) => [...lista].sort((a, b) => (a.data < b.data ? 1 : -1));
   const gerarToken = () => Math.random().toString(36).slice(2, 10);
   const IMAGENS = {
-    pessoas: 'parceria.jpg',
-    estrela: 'conquista.jpg',
-    calendario: 'calendar.jpg',
-    escudo: 'seguranca.jpg',
-    link: 'parceria.jpg',
-    engrenagem: 'seguranca.jpg'
+    pessoas: 'parceria.webp',
+    estrela: 'conquista.webp',
+    calendario: 'calendar.webp',
+    escudo: 'seguranca.webp',
+    link: 'parceria.webp',
+    engrenagem: 'seguranca.webp'
   };
-  const iconeCartao = (tom, nome) => `<img class="cartao-img" src="../imagens/ilustracions/${IMAGENS[nome]}" alt="">`;
+  const iconeCartao = (tom, nome) => `<img class="cartao-img" src="../imagens/ilustracions/${IMAGENS[nome]}" alt="" width="256" height="256" decoding="async">`;
 
   const participacaoHTML = (n) => {
     const pontos = [1, 2, 3, 4, 5]
@@ -179,6 +179,7 @@
   /* ===== Cabeçalho e rodapé ===== */
   function montarCabecalho(pagina) {
     const logado = Boolean(estado.perfil);
+    document.body.classList.toggle('logado', logado);
     const menu = logado
       ? MENUS[estado.perfil].map((m) => {
           const ativo = m.pagina === pagina;
@@ -187,6 +188,7 @@
       : '';
 
     document.getElementById('cabecalho').innerHTML = `
+      <a class="pular" href="#conteudo">Pular para o conteúdo</a>
       <header class="site-header">
         <a href="../index.html" class="marca" aria-label="Florescer, voltar ao site">
           ${LOGO}

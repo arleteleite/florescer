@@ -7,7 +7,7 @@
   function render() {
     return `
       <header class="cabecalho-pagina">
-        <p class="kicker">Crianças</p>
+        <p class="kicker" aria-hidden="true">Crianças</p>
         <h1>Suas crianças</h1>
         <p class="lead">Gere um link de convite para a família. O link tem validade de 48 horas e uso único.</p>
       </header>

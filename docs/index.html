@@ -5,9 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Florescer – Cada criança tem seu tempo</title>
   <meta name="description" content="Florescer: diário terapêutico digital que aproxima famílias e profissionais.">
+  <meta name="theme-color" content="#3E7A62">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Florescer – Cada criança tem seu tempo">
+  <meta property="og:description" content="Diário terapêutico digital que aproxima famílias e profissionais.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preload" as="image" href="imagens/banners/hero-familia-800.webp" imagesrcset="imagens/banners/hero-familia-800.webp 800w, imagens/banners/hero-familia-1600.webp 1600w" imagesizes="(max-width: 860px) 100vw, 50vw">
   <link rel="stylesheet" href="landing.css">
 </head>
 <body>
+
+  <a class="pular" href="#inicio">Pular para o conteúdo</a>
 
   <header class="site-header">
     <a href="#inicio" class="marca" aria-label="Florescer, início">
@@ -29,7 +38,6 @@
       <a href="#inicio" class="ativo" aria-current="page">Início</a>
       <a href="#sobre">Sobre</a>
       <a href="#funcionalidades">Funcionalidades</a>
-      <a href="#depoimentos">Depoimentos</a>
     </nav>
 
     <div class="acoes-topo">
@@ -39,14 +47,14 @@
   </header>
 
   <main id="inicio">
-    <section class="hero">
+    <section class="hero" aria-labelledby="titulo-principal">
       <div class="hero-texto">
         <span class="selo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.6-9.3-9C1.2 8.8 3 5 6.7 5c2.1 0 3.6 1.2 4.3 2.4C11.7 6.2 13.2 5 15.3 5 19 5 20.8 8.8 21.3 12 19 16.4 12 21 12 21z"/></svg>
           Diário Terapêutico Digital
         </span>
 
-        <h1>
+        <h1 id="titulo-principal">
           Cada criança tem seu tempo.<br>
           Cada conquista <span class="destaque-roxo">merece ser vista.</span>
         </h1>
@@ -68,51 +76,59 @@
         </div>
       </div>
 
-      <div class="hero-visual" aria-hidden="true">
-        <svg class="raios" viewBox="0 0 60 60">
+      <div class="hero-visual">
+        <svg class="raios" viewBox="0 0 60 60" aria-hidden="true">
           <path d="M14 12 L22 22 M10 26 L22 26 M30 6 L30 18 M46 14 L38 22" stroke="#F7D59A" stroke-width="4" stroke-linecap="round" fill="none"/>
         </svg>
         <div class="foto">
-          <div class="foto-placeholder"></div>
+          <img
+            src="imagens/banners/hero-familia-1600.webp"
+            srcset="imagens/banners/hero-familia-800.webp 800w, imagens/banners/hero-familia-1600.webp 1600w"
+            sizes="(max-width: 860px) 100vw, 50vw"
+            width="1600" height="893"
+            fetchpriority="high" decoding="async"
+            alt="Terapeuta e criança brincando com blocos de madeira em uma sala acolhedora">
         </div>
-        <svg class="coracao coracao-1" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10A4 4 0 0 1 12 7.5 4 4 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z" fill="none" stroke="#C9B3E6" stroke-width="1.6"/></svg>
-        <svg class="coracao coracao-2" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10A4 4 0 0 1 12 7.5 4 4 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z" fill="none" stroke="#C9B3E6" stroke-width="1.6"/></svg>
+        <svg class="coracao coracao-1" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10A4 4 0 0 1 12 7.5 4 4 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z" fill="none" stroke="#C9B3E6" stroke-width="1.6"/></svg>
+        <svg class="coracao coracao-2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10A4 4 0 0 1 12 7.5 4 4 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z" fill="none" stroke="#C9B3E6" stroke-width="1.6"/></svg>
       </div>
     </section>
 
-    <section id="funcionalidades" class="cartoes">
+    <section id="funcionalidades" class="cartoes" aria-labelledby="titulo-funcionalidades">
+      <h2 id="titulo-funcionalidades" class="sr-only">O que o Florescer oferece</h2>
+
       <article class="cartao">
-        <img class="cartao-img" src="imagens/ilustracions/calendar.jpg" alt="">
+        <img class="cartao-img" src="imagens/ilustracions/calendar.webp" alt="" width="256" height="256" loading="lazy" decoding="async">
         <h3>Acompanhe o progresso</h3>
         <p>Consulte o histórico das sessões de forma simples e organizada.</p>
       </article>
 
       <article class="cartao">
-        <img class="cartao-img" src="imagens/ilustracions/parceria.jpg" alt="">
+        <img class="cartao-img" src="imagens/ilustracions/parceria.webp" alt="" width="256" height="256" loading="lazy" decoding="async">
         <h3>Fortaleça a parceria</h3>
         <p>Mantenha uma comunicação mais próxima com os profissionais.</p>
       </article>
 
       <article class="cartao">
-        <img class="cartao-img" src="imagens/ilustracions/conquista.jpg" alt="">
+        <img class="cartao-img" src="imagens/ilustracions/conquista.webp" alt="" width="256" height="256" loading="lazy" decoding="async">
         <h3>Valorize cada conquista</h3>
         <p>Registre e celebre as pequenas e grandes vitórias.</p>
       </article>
 
       <article class="cartao">
-        <img class="cartao-img" src="imagens/ilustracions/seguranca.jpg" alt="">
+        <img class="cartao-img" src="imagens/ilustracions/seguranca.webp" alt="" width="256" height="256" loading="lazy" decoding="async">
         <h3>Com segurança</h3>
         <p>Seus dados protegidos, com respeito à privacidade da sua família.</p>
       </article>
     </section>
 
-    <section id="sobre" class="faixa">
-      <img class="faixa-broto" src="imagens/banner-institucional/conquistas.jpg" alt="">
+    <section id="sobre" class="faixa" aria-labelledby="titulo-sobre">
+      <img class="faixa-broto" src="imagens/banner-institucional/conquistas.webp" alt="" width="507" height="460" loading="lazy" decoding="async">
       <div class="faixa-divisor" aria-hidden="true"></div>
-      <p class="faixa-texto">
+      <h2 id="titulo-sobre" class="faixa-texto">
         Mais do que acompanhar terapias,<br>
         <span class="destaque-roxo">o Florescer valoriza o desenvolvimento único de cada criança.</span>
-      </p>
+      </h2>
       <a class="btn btn-solido faixa-botao" href="paginas/fluxo.html">Ver o fluxo do sistema</a>
     </section>
   </main>
@@ -124,7 +140,7 @@
   </div>
 
   <footer class="rodape">
-    <p>Florescer · Protótipo de demonstração · dados fictícios</p>
+    <p>Florescer · Protótipo de demonstração · dados fictícios · <a href="paginas/fluxo.html">Fluxo do sistema</a></p>
   </footer>
 
 </body>

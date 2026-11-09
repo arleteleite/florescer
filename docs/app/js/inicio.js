@@ -10,7 +10,7 @@
     if (!estado.vinculoAceito) {
       return `
         <header class="cabecalho-pagina">
-          <p class="kicker">Início</p>
+          <p class="kicker" aria-hidden="true">Início</p>
           <h1>Olá, ${esc(estado.nome)}</h1>
         </header>
         <section class="card" style="max-width:620px">
@@ -28,7 +28,7 @@
 
     return `
       <header class="cabecalho-pagina">
-        <p class="kicker">Início</p>
+        <p class="kicker" aria-hidden="true">Início</p>
         <h1>Olá, ${esc(estado.nome)}</h1>
         <p class="lead">Acompanhe a rotina terapêutica de ${esc(c.nome)}.</p>
       </header>
@@ -47,7 +47,7 @@
         <article class="card">
           ${iconeCartao('tom-pessego', 'estrela')}
           <h3>Última sessão</h3>
-          <p class="muted">${fmtData(ultimo.data)} · ${esc(ultimo.especialidade)}</p>
+          <p class="muted"><time datetime="${ultimo.data}">${fmtData(ultimo.data)}</time> · ${esc(ultimo.especialidade)}</p>
           <p style="margin:10px 0 14px">${esc(ultimo.observacoes)}</p>
           <a class="link-sutil" href="diario.html?id=${ultimo.id}">Ver detalhes →</a>
         </article>

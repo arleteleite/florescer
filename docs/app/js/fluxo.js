@@ -45,9 +45,9 @@
         <h2 style="margin-bottom:14px">Perfis e acessos</h2>
         <div class="tabela-wrap">
           <table class="tabela">
-            <thead><tr><th>Perfil</th><th>Vê</th><th>Faz</th></tr></thead>
+            <caption class="sr-only">Perfis, o que cada um vê e o que cada um faz</caption><thead><tr><th scope="col">Perfil</th><th scope="col">Vê</th><th scope="col">Faz</th></tr></thead>
             <tbody>
-              ${PERFIS.map((l) => `<tr>${l.map((c) => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}
+              ${PERFIS.map((l) => `<tr>${l.map((c, i) => `<td data-label="${['Perfil', 'Vê', 'Faz'][i]}">${esc(c)}</td>`).join('')}</tr>`).join('')}
             </tbody>
           </table>
         </div>

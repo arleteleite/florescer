@@ -10,7 +10,7 @@
 
     return `
       <header class="cabecalho-pagina">
-        <p class="kicker">Configurações</p>
+        <p class="kicker" aria-hidden="true">Configurações</p>
         <h1>Sua conta</h1>
       </header>
       <section class="card form-stack" style="max-width:620px">

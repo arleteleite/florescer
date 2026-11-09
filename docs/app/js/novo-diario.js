@@ -10,7 +10,7 @@
 
     return `
       <header class="cabecalho-pagina">
-        <p class="kicker">Novo diário</p>
+        <p class="kicker" aria-hidden="true">Novo diário</p>
         <h1>Registrar sessão</h1>
         <p class="lead">Preencha ao final do atendimento. Leva cerca de 3 minutos.</p>
       </header>

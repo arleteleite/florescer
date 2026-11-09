@@ -23,7 +23,7 @@
     return `
       <a class="voltar" href="linha-do-tempo.html">← Linha do tempo</a>
       <header class="cabecalho-pagina">
-        <p class="kicker">${esc(d.especialidade)} · ${fmtData(d.data)}</p>
+        <p class="kicker">${esc(d.especialidade)} · <time datetime="${d.data}">${fmtData(d.data)}</time></p>
         <h1>Sessão de ${esc(c.nome)}</h1>
         <p class="lead">Registrado por ${esc(d.terapeuta)}</p>
       </header>

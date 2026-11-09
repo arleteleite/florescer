@@ -24,7 +24,7 @@
       const resumo = d.atividades[0] + (d.atividades.length > 1 ? ` e mais ${d.atividades.length - 1}` : '');
       return `
         <li class="item-tempo">
-          <div class="data">${fmtData(d.data)}</div>
+          <div class="data"><time datetime="${d.data}">${fmtData(d.data)}</time></div>
           <a class="cartao-diario" href="diario.html?id=${d.id}">
             <div class="linha-topo">
               <span class="chip ${COR_ESPECIALIDADE[d.especialidade] || ''}">${esc(d.especialidade)}</span>
@@ -38,7 +38,7 @@
 
     return `
       <header class="cabecalho-pagina">
-        <p class="kicker">Linha do tempo</p>
+        <p class="kicker" aria-hidden="true">Linha do tempo</p>
         <h1>${titulo}</h1>
         <p class="lead">Registros ordenados do mais recente para o mais antigo.</p>
       </header>
